@@ -9,7 +9,7 @@ class Node
         this.next=null;
     }
 }
-//Linked list class   insert method, print method
+//Linked list class  --->   insert method, print method
 class LinkedList
 { 
    Node head;
@@ -22,6 +22,7 @@ class LinkedList
     {
         head=temp;
     }
+    //if head is already contating data
     else 
     {
         Node curr=head;

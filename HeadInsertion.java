@@ -66,4 +66,42 @@ public class HeadInsertion {
       ll.insertAtbeginning(9);
       ll.printll(ll.head);
     }
+
 }
+
+
+
+
+/* temp.next = head means:
+
+Store the address of the node pointed by head inside temp.next.
+
+Remember: in a linked list, next stores a reference (address) to the next node, not the value.
+
+Step-by-step example
+
+Suppose the list is:
+
+head → 10 → 20 → 30 → null
+
+You create a new node:
+
+ListNode temp = new ListNode(5);
+
+Now memory looks like:
+
+temp → 5 → null
+head → 10 → 20 → 30 → null
+Now execute
+temp.next = head;
+
+What happens?
+
+head contains the address of node 10
+
+That address is copied into temp.next
+
+So now:
+
+temp → 5 → 10 → 20 → 30 → null
+head → 10 → 20 → 30 → null */

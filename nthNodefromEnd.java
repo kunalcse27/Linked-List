@@ -1,5 +1,4 @@
 public class nthNodefromEnd {
-    
     public static Node nthNode(Node head, int n) {
         int size=0;
         Node temp=head;
@@ -18,6 +17,22 @@ public class nthNodefromEnd {
         }
 
         return temp;
+    }
+    //slow fast technique-- rabbit turtle 
+    public static Node nthNode2(Node head,int n)
+    {
+        Node slow=head;
+        Node fast=head;
+        for(int i=1;i<=n;i++)
+            {
+                fast=fast.next;
+            }
+        while(fast!=null)
+            {
+                slow=slow.next;
+                fast=fast.next;
+            }
+        return slow;
     }
 
     public static class Node {
@@ -45,5 +60,8 @@ public class nthNodefromEnd {
         e.next = f;
         Node result = nthNode(a, 2); // Example: 2nd node from end
         System.out.println(result.data); // Output: 50
+
+         Node result = nthNode2(a, 2); // Example: 2nd node from end
+        System.out.println(result.data);
     }
 }
